@@ -14,7 +14,7 @@ import (
 	"time"
 
 	"github.com/pion/logging"
-	"github.com/pion/stun/v2"
+	"github.com/theodorsm/stun/v2"
 )
 
 type stunServerConn struct {

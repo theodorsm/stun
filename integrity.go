@@ -10,7 +10,7 @@ import ( //nolint:gci
 	"fmt"
 	"strings"
 
-	"github.com/pion/stun/v2/internal/hmac"
+	"github.com/theodorsm/stun/v2/internal/hmac"
 )
 
 // separator for credentials.

@@ -16,7 +16,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/pion/stun/v2"
+	"github.com/theodorsm/stun/v2"
 )
 
 func copyAddr(dst *stun.XORMappedAddress, src stun.XORMappedAddress) {

@@ -11,7 +11,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/pion/stun/v2"
+	"github.com/theodorsm/stun/v2"
 )
 
 func main() {
