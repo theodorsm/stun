@@ -17,6 +17,7 @@ import (
 	"time"
 
 	"github.com/pion/dtls/v2"
+	dtlsnet "github.com/pion/dtls/v2/pkg/net"
 	"github.com/pion/transport/v3"
 	"github.com/pion/transport/v3/stdnet"
 )
@@ -83,7 +84,7 @@ func DialURI(uri *URI, cfg *DialConfig) (*Client, error) {
 			return nil, fmt.Errorf("failed to dial: %w", err)
 		}
 
-		if conn, err = dtls.Client(udpConn, &dtlsCfg); err != nil {
+		if conn, err = dtls.Client(dtlsnet.PacketConnFromConn(udpConn), udpConn.RemoteAddr(), &dtlsCfg); err != nil {
 			return nil, fmt.Errorf("failed to connect to '%s': %w", addr, err)
 		}
 
